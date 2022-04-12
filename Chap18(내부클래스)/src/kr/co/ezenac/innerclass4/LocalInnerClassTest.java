@@ -8,7 +8,7 @@ class Outer {
 	Runnable getRunnable(/*final*/ int i) {							//지역 변수 - 메서드 호출 후 끝날 때까지만 유효함
 		/*final*/ int num = 100;										//지역 변수 - 메서드 호출 후 끝날 때까지만 유효함
 		
-		class MyRunnable implements Runnable {
+		return new Runnable() {
 
 			@Override
 			public void run() {								// 내부 객체를 생성한 후 언제든 다시 호출 가능
@@ -21,9 +21,18 @@ class Outer {
 				System.out.println(Outer.sNum);
 				
 			}
-		}
-		return new MyRunnable();
+		};
 	}
+	
+	Runnable runner = new Runnable() {
+		
+		@Override
+		public void run() {
+			System.out.println("Test!!");
+		}
+	};;
+	
+	
 }
 
 public class LocalInnerClassTest {
@@ -32,5 +41,10 @@ public class LocalInnerClassTest {
 		Outer outer = new Outer();
 		Runnable runable = outer.getRunnable(50);		//로컬변수는 호출 후 유효하지 않게 됨
 		runable.run();									//언제든지 호출 가능한 상태임.
+		
+		System.out.println();
+		outer.runner.run();
+		
+		
 	}
 }
