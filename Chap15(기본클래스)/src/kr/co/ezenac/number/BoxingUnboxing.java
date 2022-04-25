@@ -6,24 +6,22 @@ public class BoxingUnboxing {
 		//boxing
 		Integer iObj = Integer.valueOf(10);
 		Double dObj = Double.valueOf(3.14);
-		
-		//¸Þ¼­µå È£ÃâÀ» ÅëÇØ unboxing
+	
+		//ë©”ì„œë“œ í˜¸ì¶œ í†µí•´ unboxing
 		int num1 = iObj.intValue();
 		double num2 = dObj.doubleValue();
-		
-		System.out.println(num1 + " : " + iObj);
-		System.out.println(num2 + " : " + dObj);
-		
+	
+		System.out.println(num1 +" : "+ iObj);
+		System.out.println(num2 +" : "+ dObj);
+	
+	
 		//auto boxing
 		Integer iObj2 = 10;
 		Double dObj2 = 3.14;
-		
-		//auto unboxing
+	
+		//	auto unboxing
 		int num3 = iObj2;
 		double num4 = dObj2;
-		
-		
-		
-		
+	
 	}
 }

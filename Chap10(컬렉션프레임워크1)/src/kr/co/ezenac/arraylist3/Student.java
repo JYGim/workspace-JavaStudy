@@ -9,29 +9,32 @@ public class Student {
 	ArrayList<Subject> subjectList;
 	
 	public Student(int studentID, String studentName) {
-		//super();
 		this.studentID = studentID;
 		this.studentName = studentName;
-		subjectList = new ArrayList<>();
-	}
-
-	public void addSubject(String name, int score) {
-		Subject subject = new Subject();
-		subject.setName(name);
-		subject.setScorePoint(score);
-		subjectList.add(subject);
+		subjectList = new ArrayList<Subject>();
 	}
 	
+	public void addSubject(String subjectName, int scorePoint) {
+		Subject subject = new Subject();
+		subject.setName(subjectName);
+		subject.setScorePoint(scorePoint);
+		System.out.println("-- " + subject + "--"+ subject.getName());
+		subjectList.add(subject);
+	}
+
 	public void showInfo() {
-		int total = 0;
-		for(Subject subject : subjectList) {
-			total += subject.getScorePoint();
-			System.out.println("학생 " +studentName+ "의 " +subject.getName() +"과목 성적은 "
-								+ subject.getScorePoint() +"입니다.");
+		
+		for(Subject subject: subjectList) {
+			System.out.println(subject);
+			System.out.println(studentName + "의 " + subject.getName() 
+								+ " 점수는 " + subject.getScorePoint() + "입니다.");
 		}
 		
-		System.out.println("학생 " +studentName+ "의 총점은 " +total+ " 입니다.");
-	}	
+		
+	}
+	
+	
+	
 
 }
 

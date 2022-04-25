@@ -16,6 +16,9 @@ public class StudentTest {
 		studentLee.showInfo();
 		System.out.println();
 		studentShin.showInfo();
+		System.out.println();
+		
+		
 		
 
 	}

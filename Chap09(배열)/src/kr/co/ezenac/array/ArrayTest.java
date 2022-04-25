@@ -1,8 +1,21 @@
 package kr.co.ezenac.array;
 
+import java.util.Iterator;
+
 public class ArrayTest {
 
 	public static void main(String[] args) {
+		
+		int[] scor;
+		scor = new int[5];
+		System.out.println("scor의 주소값:  " + scor);
+		
+		for(int i=0;i<scor.length;i++) {
+			System.out.println(i + ", <> " + scor[i]);
+		}
+		
+		
+		System.out.println("===========================================================================");
 		
 		//score는 참조변수
 		int[] score;
